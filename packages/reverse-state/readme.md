@@ -1,7 +1,12 @@
 # @reverse/state
-State holders which can be used with React Hooks to easily display data.
+> State holders which can be used with React Hooks to easily display data.
 
-**Table of Contents**
+You can install with nodejs and npm
+```
+npm i @reverse/state
+```
+
+## Table of Contents
 - [SimpleState](#SimpleState)
 - [StorageState](#StorageState) (browser only)
 - [hookFromState](#hookFromState) (requires react)

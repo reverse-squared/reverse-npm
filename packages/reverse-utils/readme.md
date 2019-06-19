@@ -1,5 +1,10 @@
 # @reverse/utils
-Utility functions used by other @reverse packages
+> Utility functions used by other @reverse packages
+
+You can install with nodejs and npm
+```
+npm i @reverse/utils
+```
 
 **Table of Contents**
 - [classify](#classify)
