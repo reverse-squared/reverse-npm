@@ -1,0 +1,7 @@
+{
+  "name": "reverse-squared-js",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^3.15.0"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "@reverse/emitter",
+  "version": "0.0.0",
+  "private": false,
+  "description": "Event Emitters",
+  "dependencies": {
+    "@reverse/utils": "^1.0.0"
+  }
+}
