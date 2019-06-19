@@ -1,0 +1,23 @@
+{
+  "name": "reverse-string",
+  "version": "0.0.0",
+  "description": "Useful functions for modifying and managing strings.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reverse-squared/reverse-npm.git"
+  },
+  "keywords": [
+    "string",
+    "util",
+    "utility"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/reverse-squared/reverse-npm/issues"
+  },
+  "homepage": "https://github.com/reverse-squared/reverse-npm/tree/master/packages/reverse-string",
+  "publishConfig": {
+    "access": "public"
+  }
+}
