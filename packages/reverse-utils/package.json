@@ -1,7 +1,9 @@
 {
   "name": "@reverse/utils",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": false,
   "description": "Utility functions used by other @reverse packages",
-  "gitHead": "f9efed1801af345d4a086a1ec303037fb20e2f3d"
+  "publishConfig": {
+    "access": "public"
+  }
 }
