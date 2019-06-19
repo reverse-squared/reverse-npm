@@ -1,14 +1,14 @@
 {
-  "name": "@reverse/string",
+  "name": "@reverse/date",
   "version": "0.0.0",
-  "description": "Useful functions for modifying and managing strings.",
+  "description": "Useful functions for handling dates.",
   "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/reverse-squared/reverse-npm.git"
   },
   "keywords": [
-    "string",
+    "date",
     "util",
     "utility"
   ],
@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/reverse-squared/reverse-npm/issues"
   },
-  "homepage": "https://github.com/reverse-squared/reverse-npm/tree/master/packages/reverse-string",
+  "homepage": "https://github.com/reverse-squared/reverse-npm/tree/master/packages/reverse-date",
   "publishConfig": {
     "access": "public"
   }

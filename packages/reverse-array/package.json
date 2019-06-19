@@ -1,14 +1,14 @@
 {
-  "name": "@reverse/string",
+  "name": "@reverse/array",
   "version": "0.0.0",
-  "description": "Useful functions for modifying and managing strings.",
+  "description": "Useful functions for managing arrays.",
   "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/reverse-squared/reverse-npm.git"
   },
   "keywords": [
-    "string",
+    "array",
     "util",
     "utility"
   ],
@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/reverse-squared/reverse-npm/issues"
   },
-  "homepage": "https://github.com/reverse-squared/reverse-npm/tree/master/packages/reverse-string",
+  "homepage": "https://github.com/reverse-squared/reverse-npm/tree/master/packages/reverse-array",
   "publishConfig": {
     "access": "public"
   }
