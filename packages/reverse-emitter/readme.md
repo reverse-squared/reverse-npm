@@ -1,12 +1,17 @@
 # @reverse/emitter
-Event Emitters
+> Event Emitters
 
-**Table of Contents**
+You can install with nodejs and npm
+```
+npm i @reverse/emitter
+```
+
+## Table of Contents**
 - [Emitter](#Emitter)
 - [SimpleEmitter](#SimpleEmitter)
 
-# Emitter
+## Emitter
 An event emitter.
 
-# SimpleEmitter
+## SimpleEmitter
 An event emitter with only one event name.
