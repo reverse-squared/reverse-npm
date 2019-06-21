@@ -9,6 +9,7 @@ npm install @reverse/compact
 ## Table of Contents
 - [compactNumber](#compactNumbernum-zeroDecimal)
 - [compactMiniNumber](#compactMiniNumbernum)
+- [compactTime](#compactTimeseconds)
 
 --- 
 
@@ -50,7 +51,7 @@ compactNumber(2000000, true);
 ```
 
 ### compactMiniNumber(num)
->  Compacts a number, with support for the K (1,000) unit.
+> Compacts a number, with support for the K (1,000) unit.
 #### Parameters
 - `num: Number`: The number to compact.
 #### Example
@@ -62,4 +63,16 @@ compactMiniNumber(1000000);
 
 compactMiniNumber(1500);
 // "1.5K"
+```
+
+### compactTime(seconds)
+> Compacts seconds to days, hours, minutes, and seconds.
+#### Parameters
+- `seconds: Number`: The amount of seconds.
+#### Examples
+```js
+import { compactTime } from '@reverse/compact';
+
+compactTime(1234567890);
+// "14288 Days 23 Hours 31 Minutes 30 Seconds"
 ```
