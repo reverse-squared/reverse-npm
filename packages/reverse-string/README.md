@@ -14,7 +14,7 @@ npm i @reverse/string
 ## capitalize(string)
 > Capitalizes the first letter of a string.
 ### Parameters
-- `string`: The string to modify.
+- `string: String`: The string to modify.
 ### Example
 ```js
 import { capitalize } from '@reverse/string';
@@ -29,8 +29,8 @@ capitalize('123abc');
 ## format(format, ...variables)
 > Formats a string by substituting variables.
 ### Parameters
-- `format`: The string to format.
-- `...variables`: Any variables to substitute in the string.
+- `format: String`: The string to format.
+- `...variables: Any`: Any variables to substitute in the string.
 ### Example
 ```js
 import { format } from '@reverse/string';
@@ -45,7 +45,7 @@ format('I like $2 and $1.', 'cats', 'dogs');
 ## isValidEmail(email)
 > Checks if a email is a valid formatted email.
 ### Paramerters
-- `email`: The email to check.
+- `email: String`: The email to check.
 ### Example
 ```js
 import { isValidEmail } from '@reverse/string';

@@ -1,6 +1,7 @@
 /**
  * Pads a single digit number with a leading zero.
  * @param {String|Number} number The number to pad.
+ * @returns {String} A padded two digit number with a zero.
  */
 function padout(number) {
   return number < 10 ? '0' + number : number;
@@ -9,6 +10,7 @@ function padout(number) {
 /**
  * Finds the month and date of easter of that year.
  * @param {Number} year The year.
+ * @returns {String} The month and day of easter in a "MM.DD" format.
  */
 function getEasterDate(year) {
   const C = Math.floor(year / 100);

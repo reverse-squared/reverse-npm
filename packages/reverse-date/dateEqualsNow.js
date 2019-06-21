@@ -3,6 +3,7 @@
  * @param {Number} month The month in a number. Leading zero optional.
  * @param {Number} date The date.
  * @param {Number} year The full year.
+ * @returns {Boolean} Whether or not the provided day is the same day as today.
  */
 function dateEqualsNow(month, date, year) {
   const now = new Date();

@@ -1,4 +1,4 @@
-# reverse-date
+# @reverse/date
 > Useful functions for handling dates.
 
 ## Install
@@ -7,24 +7,13 @@ npm install @reverse/date
 ```
 
 ## Table of Contents
-- [getEasterDate](#getEasterDateyear)
 - [dateEqualsNow](#dateEqualsNowmonth-date-year)
+- [formatDate](#formatDatedate)
+- [getEasterDate](#getEasterDateyear)
 
 --- 
 
 ## Usage
-### getEasterDate(year)
-> Finds the month and date of easter of that year.
-#### Paramerters
-- `year: Number`: The email to check.
-#### Example
-```js
-import { getEasterDate } from '@reverse/date';
-
-getEasterDate(2020);
-// "04.12"
-```
-
 ### dateEqualsNow(month, date, year)
 > Checks if a given date is the same date as today.
 #### Parameters
@@ -42,4 +31,28 @@ dateEqualsNow(06, 19, 2019);
 
 dateEqualsNow(04, 20, 2069);
 // false
+```
+
+### formatDate(date)
+> A nicely formatted date with time in AM and PM.
+#### Parameters
+- `date: Date`: A date to format.
+#### Example
+```js
+import { formatDate } from '@reverse/date';
+
+formatDate(new Date());
+// Example Output: "2019-06-21 at 10:53am"
+```
+
+### getEasterDate(year)
+> Finds the month and date of easter of that year.
+#### Paramerters
+- `year: Number`: The email to check.
+#### Example
+```js
+import { getEasterDate } from '@reverse/date';
+
+getEasterDate(2020);
+// "04.12"
 ```

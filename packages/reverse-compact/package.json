@@ -1,0 +1,26 @@
+{
+  "name": "@reverse/compact",
+  "version": "0.0.0",
+  "description": "Functions for compacting numbers.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reverse-squared/reverse-npm.git"
+  },
+  "keywords": [
+    "array",
+    "util",
+    "utility"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/reverse-squared/reverse-npm/issues"
+  },
+  "homepage": "https://github.com/reverse-squared/reverse-npm/tree/master/packages/reverse-compact",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "comma-number": "^2.0.1"
+  }
+}

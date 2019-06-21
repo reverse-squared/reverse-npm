@@ -1,4 +1,4 @@
-# reverse-array
+# @reverse/array
 > Useful functions for managing arrays.
 
 ## Install

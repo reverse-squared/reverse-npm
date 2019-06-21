@@ -1,4 +1,5 @@
 module.exports = {
   getEasterDate: require('./getEasterDate'),
-  dateEqualsNow: require('./dateEqualsNow')
+  dateEqualsNow: require('./dateEqualsNow'),
+  formatDate: require('./formatDate')
 }
