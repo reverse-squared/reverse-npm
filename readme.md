@@ -8,6 +8,7 @@
 - [@reverse/compact](./packages/reverse-compact/README.md)
 - [@reverse/date](./packages/reverse-date/README.md)
 - [@reverse/emitter](./packages/reverse-emitter/readme.md)
+- [@reverse/random](./packages/reverse-random/README.md)
 - [@reverse/state](./packages/reverse-state/readme.md)
 - [@reverse/string](./packages/reverse-string/README.md)
 - [@reverse/utils](./packages/reverse-utils/readme.md)
