@@ -7,7 +7,10 @@ npm i @reverse/random
 ```
 
 ## Table of Contents
-- 
+- [randomInt](#randomIntmin-max)
+- [chance](#chancepercent)
+- [randomOf](#randomOflist)
+- [randomList](#randomListlist-items-requiredValues)
 
 ## Usage
 ### randomInt(min, max)
@@ -39,6 +42,18 @@ chance(0)
 
 chance(50)
 // Example Output: true
+```
+
+### randomOf(list)
+> Returns a random element from an array.
+#### Parameters
+- `list: Array`: The array to pick from.
+#### Example
+```js
+import { randomOf } from '@reverse/random';
+
+randomOf([1, 2, 3]);
+// Example Output: 2
 ```
 
 ### randomList(list, items, requiredValues)
