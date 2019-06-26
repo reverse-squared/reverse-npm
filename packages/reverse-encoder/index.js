@@ -1,3 +1,1 @@
-module.exports = {
-  encoder: require('./encoder')
-}
+module.exports = require('./encoder');
