@@ -5,7 +5,7 @@ const errorCacheReverse = new Map();
  * Encodes a value to a six character code.
  * @param {any} value The value to encode.
  */
-export function encode(value) {
+function encode(value) {
   let code;
   if(errorCache.has(value)) {
     code = errorCache.get(value);
@@ -23,7 +23,7 @@ export function encode(value) {
  * @param {String} code The code to decode.
  * @returns {any} The returned value.
  */
-export function decode(code) {
+function decode(code) {
   return errorCacheReverse.get(code);
 }
 
