@@ -1,0 +1,23 @@
+{
+  "name": "@reverse/encoder",
+  "version": "0.0.0",
+  "description": "Encodes values into a string.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reverse-squared/reverse-npm.git"
+  },
+  "keywords": [
+    "encoder",
+    "encode",
+    "decode"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/reverse-squared/reverse-npm/issues"
+  },
+  "homepage": "https://github.com/reverse-squared/reverse-npm/tree/master/packages/reverse-encoder",
+  "publishConfig": {
+    "access": "public"
+  }
+}

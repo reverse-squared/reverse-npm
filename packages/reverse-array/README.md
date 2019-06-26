@@ -27,6 +27,19 @@ moveIndex([1, 2, 3], 0, 2);
 // [2, 3, 1]
 ```
 
+### removeAt(array, index)
+> Removes an element from an array by it's index.
+#### Parameters
+- `array: Array`: The array to modify.
+- `index: Number` The index to remove.
+#### Example
+```js
+import { removeAt } from '@reverse/array';
+
+removeAt([1, 2, 3], 1);
+// [1, 3] 
+```
+
 ### shuffle(array)
 > Shuffles an array and returns it.
 #### Paramerters
@@ -37,4 +50,16 @@ import { shuffle } from '@reverse/array';
 
 shuffle([1, 2, 3]);
 // Example Output: [2, 3, 1]
+```
+
+### unique(array)
+> Returns an array of all the unique values of an array. (i.e. Removes duplicate values.)
+#### Parameters
+- `array: Array`: The array to modify.
+#### Example
+```js
+import { unique } from '@reverse/array';
+
+unique([1, 1, 2, 3, 4, 4, 4, 4, 5]);
+// [1, 2, 3, 4, 5]
 ```
