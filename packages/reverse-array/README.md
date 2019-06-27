@@ -8,7 +8,10 @@ npm install @reverse/array
 
 ## Table of Contents
 - [moveIndex](#moveIndexarray-oldIndex-newIndex)
+- [removeAt](#removeAtarray-index)
+- [removeBy](#removeByarray-value)
 - [shuffle](#shufflearray)
+- [unique](#uniquearray)
 
 --- 
 
@@ -38,6 +41,19 @@ import { removeAt } from '@reverse/array';
 
 removeAt([1, 2, 3], 1);
 // [1, 3] 
+```
+
+### removeBy(array, value)
+> Removes an element from an array by it's value.
+#### Parameters
+- `array: Array`: The array to modify.
+- `value: any` The element to remove.
+#### Example
+```js
+import { removeBy } from '@reverse/array';
+
+removeBy(['A', 'B', 'C'], 'B');
+// ['A', 'C'] 
 ```
 
 ### shuffle(array)
