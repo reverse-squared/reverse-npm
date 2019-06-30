@@ -1,6 +1,6 @@
 {
   "name": "@reverse/utils",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Utility functions used by other @reverse packages",
   "publishConfig": {
     "access": "public"

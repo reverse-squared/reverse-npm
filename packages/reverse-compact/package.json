@@ -1,6 +1,6 @@
 {
   "name": "@reverse/compact",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Functions for compacting numbers.",
   "main": "index.js",
   "repository": {
