@@ -1,6 +1,6 @@
 {
   "name": "@reverse/webpack-chunk-rename",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Lets you rename webpack chunks but with more control",
   "publishConfig": {
     "access": "public"

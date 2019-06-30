@@ -1,10 +1,10 @@
 {
   "name": "@reverse/state",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "State holders which can be used with React Hooks to easily display data",
   "dependencies": {
-    "@reverse/emitter": "^1.0.2",
-    "@reverse/utils": "^1.0.2"
+    "@reverse/emitter": "^1.0.3",
+    "@reverse/utils": "^1.0.3"
   },
   "publishConfig": {
     "access": "public"
