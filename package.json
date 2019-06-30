@@ -1,7 +1,13 @@
 {
   "name": "reverse-squared-js",
   "private": true,
+  "scripts": {
+    "lint": "cspell packages/**/*.js && eslint packages"
+  },
   "devDependencies": {
+    "cspell": "^4.0.23",
+    "eslint": "^6.0.1",
+    "eslint-config-dave": "^2.0.4",
     "lerna": "^3.15.0"
   }
 }

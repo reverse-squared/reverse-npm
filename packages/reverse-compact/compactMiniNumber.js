@@ -1,6 +1,7 @@
-var commaNumber = require('comma-number');
+/* eslint-disable no-inline-comments */
+const commaNumber = require('comma-number');
 
-let compactNumberMap = {
+const compactNumberMap = {
   4: 'K', // 1,000 -> 1K (only in compactMini)
   7: 'M', // 1,000,000 -> 1M
   10: 'B', // 1,000,000,000 -> 1B
@@ -28,7 +29,7 @@ function compactMiniNumber(num) {
     return Math.floor(num).toString();
   }
 
-  let letter = compactNumberMap[
+  const letter = compactNumberMap[
     Math.floor((Math.round(num).toString().length - 1) / 3) * 3 + 1
   ];
 

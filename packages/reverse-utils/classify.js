@@ -2,7 +2,7 @@
 function classify(func) {
   const classFunction = function(...args) {
     return new func(...args);
-  }
+  };
   classFunction.name = func.name;
   return classFunction;
 }

@@ -3,5 +3,5 @@ module.exports = {
   moveIndex: require('./moveIndex'),
   removeAt: require('./removeAt'),
   removeBy: require('./removeBy'),
-  unique: require('./unique')
-}
+  unique: require('./unique'),
+};

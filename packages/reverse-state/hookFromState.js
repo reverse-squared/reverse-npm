@@ -23,10 +23,10 @@ function hookFromState(state, name = 'ReverseState') {
     }, []);
 
     return value;
-  };
-  StateHook.name = 'use' + ReverseState;
+  }
+  StateHook.name = 'use' + name;
 
   return StateHook;
 }
 
-module.exports = hookFromState
+module.exports = hookFromState;

@@ -8,7 +8,7 @@ function resolveValue(name, fallback) {
     if(localStorage.getItem(name)) {
       return JSON.parse(localStorage.getItem(name));
     }
-  } catch {
+  } catch(ignored) {
     // fall back
   }
   return fallback;
@@ -23,7 +23,7 @@ function StorageState(name, initialValue = null) {
   // Make a state
   const state = new SimpleState(resolveValue(name, initialValue));
 
-  // 
+  //
   state.onChange((value) => {
     localStorage.setItem(name, JSON.stringify(value));
   });

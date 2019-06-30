@@ -9,8 +9,8 @@ function encode(value) {
   let code;
   if(errorCache.has(value)) {
     code = errorCache.get(value);
-  }else {
-    code = Math.floor(Math.random() * 2 ** 24).toString(16).toUpperCase().padStart(4, '0');
+  } else {
+    code = Math.floor(Math.pow(Math.random() * 2, 24)).toString(16).toUpperCase().padStart(4, '0');
     errorCache.set(value, code);
     errorCacheReverse.set(code, value);
   }
@@ -29,5 +29,5 @@ function decode(code) {
 
 module.exports = {
   encode: encode,
-  decode: decode
-}
+  decode: decode,
+};

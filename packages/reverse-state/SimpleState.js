@@ -7,15 +7,15 @@ function SimpleState(initialValue = null) {
 
   this.get = function() {
     return value;
-  }
+  };
   this.set = function(newValue) {
     value = newValue;
     emitter.emit();
-  }
+  };
   this.map = function(transformer) {
     value = transformer(value);
     emitter.emit();
-  }
+  };
   this.addListener = emitter.addListener;
   this.removeListener = emitter.removeListener;
   this.removeAllListeners = emitter.removeAllListeners;

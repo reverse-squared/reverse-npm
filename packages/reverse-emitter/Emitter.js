@@ -20,7 +20,7 @@ function Emitter() {
     if(!listenerMap.has(event)) {
       return;
     }
-    listenerMap.get(event).clear(callback);
+    listenerMap.get(event).clear();
   };
   this.emit = function(event, ...args) {
     if (!listenerMap.has(event)) {

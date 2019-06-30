@@ -1,4 +1,5 @@
 const MissingItem = Symbol('MissingItem');
+const randomOf = require('./randomOf');
 
 /**
  * Picks multiple values from an array.
@@ -8,8 +9,8 @@ const MissingItem = Symbol('MissingItem');
  * @returns {Array} The returned values.
  */
 function randomList(list, items = 1, requiredValues = []) {
-  let requiredValuesPositions = requiredValues.map(() => -1);
-  let values = Array(items).fill(MissingItem);
+  const requiredValuesPositions = requiredValues.map(() => -1);
+  const values = Array(items).fill(MissingItem);
   requiredValues.forEach((item, i) => {
     let position;
     do {
@@ -21,7 +22,7 @@ function randomList(list, items = 1, requiredValues = []) {
   requiredValuesPositions.forEach((position, i) => {
     values[position] = requiredValues[i];
   });
-  return values.map(item => {
+  return values.map((item) => {
     if (item === MissingItem) {
       return randomOf(list);
     }

@@ -5,7 +5,8 @@
 
 These packages are utility things that we have in our own projects that we make, and decided to make
 them public. You will find all sorts of really weird and useful things in all sorts of areas of
-JavaScript.
+JavaScript. It is all written as CommonJS modules so they work out of the box in Node but also can
+be bundled with something like Webpack.
 
 ## Packages
 - [@reverse/array](./packages/reverse-array/README.md)
