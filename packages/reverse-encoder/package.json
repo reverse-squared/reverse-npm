@@ -1,6 +1,6 @@
 {
   "name": "@reverse/encoder",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Encodes values into a string.",
   "main": "index.js",
   "repository": {
