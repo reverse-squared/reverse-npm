@@ -1,0 +1,21 @@
+{
+  "name": "@reverse/callback",
+  "version": "0.0.0",
+  "description": "Little callbacks.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reverse-squared/reverse-npm.git"
+  },
+  "keywords": [
+    "utility"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/reverse-squared/reverse-npm/issues"
+  },
+  "homepage": "https://github.com/reverse-squared/reverse-npm/tree/master/packages/reverse-callback",
+  "publishConfig": {
+    "access": "public"
+  }
+}
