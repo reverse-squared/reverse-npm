@@ -1,1 +1,5 @@
-module.exports = require('./encoder');
+module.exports = Object.assign(
+  {},
+  require('./encoder'),
+  require('./generator'),
+);

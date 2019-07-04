@@ -1,3 +1,5 @@
+const generateID = require('./generator').generateID;
+
 const errorCache = new Map();
 const errorCacheReverse = new Map();
 
@@ -10,7 +12,17 @@ function encode(value) {
   if(errorCache.has(value)) {
     code = errorCache.get(value);
   } else {
-    code = Math.floor(Math.pow(Math.random() * 2, 24)).toString(16).toUpperCase().padStart(4, '0');
+    let i = 0;
+    do {
+      code = generateID();
+      i++;
+      if(i > 100) {
+        throw new Error(
+          'The ID Generator for @reverse/encoder could not generate a new code for the '
+          + 'given string. Try setting the ID Generator to something else.'
+        );
+      }
+    } while (errorCacheReverse.has(code));
     errorCache.set(value, code);
     errorCacheReverse.set(code, value);
   }
