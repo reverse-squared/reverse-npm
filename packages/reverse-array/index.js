@@ -2,6 +2,6 @@ module.exports = {
   shuffle: require('./shuffle'),
   moveIndex: require('./moveIndex'),
   removeAt: require('./removeAt'),
-  removeBy: require('./removeBy'),
+  remove: require('./remove'),
   unique: require('./unique'),
 };
