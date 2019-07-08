@@ -1,4 +1,4 @@
-const classify = require('./classify');
+const classify = require('@reverse/utils/classify');
 const SimpleState = require('./SimpleState');
 
 const storageStateCache = {};
