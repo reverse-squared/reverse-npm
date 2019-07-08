@@ -1,4 +1,4 @@
-const classify = require('@reverse/utils');
+const classify = require('@reverse/utils/classify');
 
 // A single channel EventEmitter.
 function SimpleEmitter() {
