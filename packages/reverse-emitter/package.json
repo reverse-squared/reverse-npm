@@ -1,6 +1,6 @@
 {
   "name": "@reverse/emitter",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Event Emitters",
   "dependencies": {
     "@reverse/utils": "^1.2.0"
