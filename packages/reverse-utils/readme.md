@@ -1,5 +1,5 @@
 # @reverse/utils
-> Utility functions used by other @reverse packages
+> Really simple utility functions used by other @reverse packages
 
 You can install with nodejs and npm
 ```
@@ -19,3 +19,6 @@ catchFallback(() => mightThrowAnError(params), 'default');
 
 ## classify
 Turns the passed function into a class. The created class doesn't have to be created with the `new` keyword.
+
+## switchObject
+Returns `object[key]` or `object.default`

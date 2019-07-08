@@ -1,4 +1,5 @@
 module.exports = {
-  classify: require('./classify'),
   catchFallback: require('./catchFallback'),
+  classify: require('./classify'),
+  switchObject: require('./switchObject'),
 };
