@@ -3,13 +3,8 @@
  * @param {Array} array The array to modify.
  * @param {any} value The element to remove.
  */
-function removeBy(array, value) {
-  const index = array.indexOf(value);
-
-  if(index !== -1) {
-    return array.splice(index, 1);
-  }
-  return array;
+function remove(array, value) {
+  return array.filter((x) => x !== value);
 }
 
-module.exports = removeBy;
+module.exports = remove;
