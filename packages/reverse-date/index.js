@@ -1,5 +1,6 @@
-module.exports = {
-  getEasterDate: require('./getEasterDate'),
-  dateEqualsNow: require('./dateEqualsNow'),
-  formatDate: require('./formatDate'),
-};
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getEasterDate = require('./getEasterDate');
+exports.dateEqualsNow = require('./dateEqualsNow');
+exports.formatDate = require('./formatDate');
+//# sourceMappingURL=index.js.map

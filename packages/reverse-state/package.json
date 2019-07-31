@@ -8,5 +8,10 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "files": [
+    "*.js",
+    "*.js.map",
+    "*.d.ts"
+  ]
 }

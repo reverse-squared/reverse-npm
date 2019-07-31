@@ -4,5 +4,10 @@
   "description": "Utility functions used by other @reverse packages",
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "files": [
+    "*.js",
+    "*.js.map",
+    "*.d.ts"
+  ]
 }

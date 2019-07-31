@@ -17,5 +17,10 @@
   "homepage": "https://github.com/reverse-squared/reverse-npm/tree/master/packages/reverse-callback",
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "files": [
+    "*.js",
+    "*.js.map",
+    "*.d.ts"
+  ]
 }

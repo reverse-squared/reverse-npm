@@ -2,12 +2,15 @@
   "name": "reverse-squared-js",
   "private": true,
   "scripts": {
-    "lint": "cspell packages/**/*.js && eslint packages"
+    "lint": "cspell packages/**/*.js && eslint packages",
+    "build": "tsc"
   },
   "devDependencies": {
+    "@types/node": "^12.6.8",
     "cspell": "^4.0.23",
     "eslint": "^6.0.1",
     "eslint-config-dave": "^2.0.4",
-    "lerna": "^3.15.0"
+    "lerna": "^3.15.0",
+    "typescript": "^3.5.3"
   }
 }

@@ -22,5 +22,10 @@
   },
   "dependencies": {
     "comma-number": "^2.0.1"
-  }
+  },
+  "files": [
+    "*.js",
+    "*.js.map",
+    "*.d.ts"
+  ]
 }

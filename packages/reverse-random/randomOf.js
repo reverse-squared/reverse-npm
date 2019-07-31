@@ -1,10 +1,6 @@
-/**
- * Returns a random element from an array.
- * @param {Array} list The array to pick from.
- * @returns {any} The returned item from the array
- */
+"use strict";
 function randomOf(list) {
-  return list[Math.floor(Math.random() * list.length)];
+    return list[Math.floor(Math.random() * list.length)];
 }
-
 module.exports = randomOf;
+//# sourceMappingURL=randomOf.js.map

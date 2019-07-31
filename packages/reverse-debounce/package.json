@@ -1,0 +1,13 @@
+{
+  "name": "@reverse/debounce",
+  "version": "0.0.0",
+  "description": "Debounce, Throttle, and Queue Execution Factories.",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "*.js",
+    "*.js.map",
+    "*.d.ts"
+  ]
+}

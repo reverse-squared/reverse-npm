@@ -1,15 +1,18 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 function catchFallback(cb, ifError) {
-  try {
-    const returnVal = cb();
-
-    if (returnVal instanceof Promise) {
-      return returnVal.catch(() => {
-        return ifError;
-      });
+    try {
+        return cb();
     }
-  } catch (e) {
-    return ifError;
-  }
+    catch (e) {
+        return ifError;
+    }
 }
-
-module.exports = catchFallback;
+exports.catchFallback = catchFallback;
+function catchFallbackAsync(cb, ifError) {
+    return cb().catch(() => {
+        return ifError;
+    });
+}
+exports.catchFallbackAsync = catchFallbackAsync;
+//# sourceMappingURL=catchFallback.js.map

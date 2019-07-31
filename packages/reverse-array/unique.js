@@ -1,10 +1,6 @@
-/**
- * Returns an array of all the unique values of an array. (i.e. Removes duplicate values.)
- * @param {Array} array The array to modify.
- * @returns {Array} The array with only the unique values.
- */
+"use strict";
 function unique(array) {
-  return [...new Set(array)];
+    return [...new Set(array)];
 }
-
 module.exports = unique;
+//# sourceMappingURL=unique.js.map
