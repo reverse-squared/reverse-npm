@@ -5,7 +5,7 @@ function LoadReact() {
   }
 }
 
-function hookFromState(state, name: string = 'ReverseState') {
+export function hookFromState(state, name: string = 'ReverseState') {
   LoadReact();
 
   function StateHook() {
@@ -28,5 +28,3 @@ function hookFromState(state, name: string = 'ReverseState') {
 
   return StateHook;
 }
-
-module.exports = hookFromState;

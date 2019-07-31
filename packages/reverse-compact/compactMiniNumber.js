@@ -12,5 +12,5 @@ function compactMiniNumber(num) {
     const letter = mapLengthToLetter_1.default[Math.floor((Math.round(num).toString().length - 1) / 3) * 3 + 1];
     return commaNumber(num, '.').substring(0, 3).replace(/\.$/, '') + letter;
 }
-module.exports = compactMiniNumber;
+exports.compactMiniNumber = compactMiniNumber;
 //# sourceMappingURL=compactMiniNumber.js.map

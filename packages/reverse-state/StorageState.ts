@@ -21,7 +21,7 @@ export const StorageState = classify(function StorageState(name, initialValue = 
   }
 
   // Make a state
-  const state = new SimpleState(resolveValue(name, initialValue));
+  const state = new SimpleState(resolveValue(name, initialValue)) as any;
 
   //
   state.onChange((value) => {

@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 function dateEqualsNow(month, date, year) {
     const now = new Date();
     const nowMonth = now.getMonth() + 1;
@@ -6,5 +7,5 @@ function dateEqualsNow(month, date, year) {
     const nowYear = now.getFullYear();
     return nowMonth === month && nowDate === date && nowYear === year;
 }
-module.exports = dateEqualsNow;
+exports.dateEqualsNow = dateEqualsNow;
 //# sourceMappingURL=dateEqualsNow.js.map

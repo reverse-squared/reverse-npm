@@ -1,6 +1,7 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 function unique(array) {
     return [...new Set(array)];
 }
-module.exports = unique;
+exports.unique = unique;
 //# sourceMappingURL=unique.js.map

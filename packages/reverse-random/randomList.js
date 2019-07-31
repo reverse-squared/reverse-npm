@@ -1,6 +1,7 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const MissingItem = Symbol('MissingItem');
-const randomOf = require('./randomOf');
+const randomOf_1 = require("./randomOf");
 function randomList(list, items = 1, requiredValues = []) {
     const requiredValuesPositions = requiredValues.map(() => -1);
     const values = Array(items).fill(MissingItem);
@@ -16,10 +17,10 @@ function randomList(list, items = 1, requiredValues = []) {
     });
     return values.map((item) => {
         if (item === MissingItem) {
-            return randomOf(list);
+            return randomOf_1.randomOf(list);
         }
         return item;
     });
 }
-module.exports = randomList;
+exports.randomList = randomList;
 //# sourceMappingURL=randomList.js.map

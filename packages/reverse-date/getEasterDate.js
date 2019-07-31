@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 function padOut(number) {
     return number < 10 ? '0' + number : number.toString();
 }
@@ -16,5 +17,5 @@ function getEasterDate(year) {
     const D = L + 28 - 31 * Math.floor(M / 4);
     return padOut(M) + '.' + padOut(D);
 }
-module.exports = getEasterDate;
+exports.getEasterDate = getEasterDate;
 //# sourceMappingURL=getEasterDate.js.map

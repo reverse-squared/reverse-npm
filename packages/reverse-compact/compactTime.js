@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 function compactTime(seconds) {
     if (typeof seconds !== 'number') {
         return 'NaN Seconds';
@@ -24,5 +25,5 @@ function compactTime(seconds) {
         + plural(seconds % (60 * 60) / 60, 'Minute') + ' '
         + plural(seconds % 60, 'Second');
 }
-module.exports = compactTime;
+exports.compactTime = compactTime;
 //# sourceMappingURL=compactTime.js.map

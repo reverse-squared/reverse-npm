@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 function formatDate(date) {
     const year = date.getFullYear();
     const month = (date.getMonth() + 1).toString().padStart(2, '0');
@@ -11,5 +12,5 @@ function formatDate(date) {
     const minuteString = minute < 10 ? '0' + minute : minute;
     return `${year}-${month}-${day} at ${hour}:${minuteString}${suffix}`;
 }
-module.exports = formatDate;
+exports.formatDate = formatDate;
 //# sourceMappingURL=formatDate.js.map

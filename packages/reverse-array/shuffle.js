@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 function shuffle(array) {
     let currentIndex = array.length, randomIndex, temporaryValue;
     while (0 !== currentIndex) {
@@ -10,5 +11,5 @@ function shuffle(array) {
     }
     return array;
 }
-module.exports = shuffle;
+exports.shuffle = shuffle;
 //# sourceMappingURL=shuffle.js.map

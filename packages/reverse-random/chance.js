@@ -1,6 +1,7 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 function chance(percent) {
     return Math.random() * 100 <= percent;
 }
-module.exports = chance;
+exports.chance = chance;
 //# sourceMappingURL=chance.js.map

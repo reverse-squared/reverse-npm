@@ -23,11 +23,9 @@ function encode(value) {
     }
     return code;
 }
+exports.encode = encode;
 function decode(code) {
     return errorCacheReverse.get(code);
 }
-module.exports = {
-    encode: encode,
-    decode: decode,
-};
+exports.decode = decode;
 //# sourceMappingURL=encoder.js.map

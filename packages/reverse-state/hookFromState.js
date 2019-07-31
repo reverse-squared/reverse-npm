@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 let React;
 function LoadReact() {
     if (!React) {
@@ -22,5 +24,5 @@ function hookFromState(state, name = 'ReverseState') {
     StateHook.name = 'use' + name;
     return StateHook;
 }
-module.exports = hookFromState;
+exports.hookFromState = hookFromState;
 //# sourceMappingURL=hookFromState.js.map

@@ -4,10 +4,8 @@ import compactNumberMap from './mapLengthToLetter';
 
 /**
  * Compacts a number, with support for the K (1,000) unit.
- * @param {Number} num The number to compact.
- * @returns {String} A compacted number with a trailing letter.
  */
-function compactMiniNumber(num) {
+export function compactMiniNumber(num) {
   if(typeof num !== 'number') {
     return 'NaN';
   }
@@ -22,5 +20,3 @@ function compactMiniNumber(num) {
 
   return commaNumber(num, '.').substring(0, 3).replace(/\.$/, '') + letter;
 }
-
-module.exports = compactMiniNumber;

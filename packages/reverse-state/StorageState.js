@@ -1,5 +1,7 @@
-const classify = require('@reverse/utils/classify');
-const SimpleState = require('./SimpleState');
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const classify_1 = require("@reverse/utils/classify");
+const SimpleState_1 = require("./SimpleState");
 const storageStateCache = {};
 function resolveValue(name, fallback) {
     try {
@@ -11,11 +13,11 @@ function resolveValue(name, fallback) {
     }
     return fallback;
 }
-function StorageState(name, initialValue = null) {
+exports.StorageState = classify_1.classify(function StorageState(name, initialValue = null) {
     if (storageStateCache[name]) {
         return storageStateCache[name];
     }
-    const state = new SimpleState(resolveValue(name, initialValue));
+    const state = new SimpleState_1.SimpleState(resolveValue(name, initialValue));
     state.onChange((value) => {
         localStorage.setItem(name, JSON.stringify(value));
     });
@@ -25,6 +27,5 @@ function StorageState(name, initialValue = null) {
     };
     storageStateCache[name] = state;
     return state;
-}
-module.exports = classify(StorageState);
+});
 //# sourceMappingURL=StorageState.js.map
