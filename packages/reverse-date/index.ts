@@ -1,3 +1,3 @@
-export const getEasterDate = require('./getEasterDate');
-export const dateEqualsNow = require('./dateEqualsNow');
-export const formatDate = require('./formatDate');
+export * from './dateEqualsNow';
+export * from './formatDate';
+export * from './getEasterDate';

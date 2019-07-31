@@ -3,8 +3,6 @@
  * @param {Array} array The array to modify.
  * @returns {Array} The array with only the unique values.
  */
-function unique<T>(array: T[]): T[] {
+export function unique<T>(array: T[]): T[] {
   return [...new Set(array)];
 }
-
-export = unique;

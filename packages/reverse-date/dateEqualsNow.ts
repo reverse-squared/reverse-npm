@@ -1,7 +1,7 @@
 /**
  * Checks if a given date is the same date as today.
  */
-function dateEqualsNow(month: number, date: number, year: number) {
+export function dateEqualsNow(month: number, date: number, year: number) {
   const now = new Date();
 
   const nowMonth = now.getMonth() + 1;
@@ -10,5 +10,3 @@ function dateEqualsNow(month: number, date: number, year: number) {
 
   return nowMonth === month && nowDate === date && nowYear === year;
 }
-
-export = dateEqualsNow;

@@ -1,5 +1,2 @@
-module.exports = Object.assign(
-  {},
-  require('./encoder'),
-  require('./generator'),
-);
+export * from './encoder';
+export * from './generator';

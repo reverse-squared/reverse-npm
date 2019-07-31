@@ -1,5 +1,3 @@
-module.exports = {
-  catchFallback: require('./catchFallback'),
-  classify: require('./classify'),
-  switchObject: require('./switchObject'),
-};
+export * from './catchFallback';
+export * from './classify';
+export * from './switchObject';

@@ -1,7 +1,7 @@
 /**
  * Compacts seconds to days, hours, minutes, and seconds.
  */
-function compactTime(seconds: number): string {
+export function compactTime(seconds: number): string {
   if (typeof seconds !== 'number') {
     return 'NaN Seconds';
   }
@@ -27,5 +27,3 @@ function compactTime(seconds: number): string {
     + plural(seconds % (60 * 60) / 60, 'Minute') + ' '
     + plural(seconds % 60, 'Second');
 }
-
-export = compactTime;

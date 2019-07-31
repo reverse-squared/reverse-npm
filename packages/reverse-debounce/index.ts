@@ -1,3 +1,3 @@
-export const debounce = require('./debounce');
-export const throttle = require('./throttle');
-export const queueExec = require('./queueExec');
+export * from './debounce';
+export * from './throttle';
+export * from './queueExec';

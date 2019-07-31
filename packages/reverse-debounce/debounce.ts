@@ -1,4 +1,4 @@
-function debounce<Args extends any[]>(func: (...args: Args) => void, waitTime: number) {
+export function debounce<Args extends any[]>(func: (...args: Args) => void, waitTime: number) {
   let timeout;
 
   return function (...args: Args) {
@@ -6,5 +6,3 @@ function debounce<Args extends any[]>(func: (...args: Args) => void, waitTime: n
     timeout = setTimeout(func, waitTime, ...args);
   };
 };
-
-export = debounce;

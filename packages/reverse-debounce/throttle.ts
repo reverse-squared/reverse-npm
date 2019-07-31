@@ -1,4 +1,4 @@
-function throttle<Args extends any[]>(func: (...args: Args) => void, waitTime: number) {
+export function throttle<Args extends any[]>(func: (...args: Args) => void, waitTime: number) {
   let timeout = null;
   let previous = 0;
 

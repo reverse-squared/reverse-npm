@@ -5,7 +5,7 @@ import compactNumberMap from './mapLengthToLetter';
 /**
  * Compacts a number using an letter.
  */
-function compactNumber(num: number, zeroDecimal: boolean) {
+export function compactNumber(num: number, zeroDecimal: boolean) {
   if(typeof num !== 'number') {
     return 'NaN';
   }
@@ -27,5 +27,3 @@ function compactNumber(num: number, zeroDecimal: boolean) {
 
   return commaNumber(num, '.').substring(0, 4).replace(/\.$/, '') + letter;
 }
-
-export = compactNumber;

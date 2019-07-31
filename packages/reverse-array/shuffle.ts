@@ -3,7 +3,7 @@
  * @param {Array} array The array to be shuffled.
  * @returns {Array} The shuffled array.
  */
-function shuffle<T>(array: T[]): T[] {
+export function shuffle<T>(array: T[]): T[] {
   let currentIndex = array.length, randomIndex, temporaryValue;
 
   while (0 !== currentIndex) {
@@ -16,5 +16,3 @@ function shuffle<T>(array: T[]): T[] {
 
   return array;
 }
-
-export = shuffle;

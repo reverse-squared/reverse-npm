@@ -1,5 +1,5 @@
-const classify = require('@reverse/utils/classify');
-const SimpleState = require('./SimpleState');
+import { classify } from '@reverse/utils/classify';
+import { SimpleState } from './SimpleState';
 
 const storageStateCache = {};
 
@@ -14,7 +14,7 @@ function resolveValue(name, fallback) {
   return fallback;
 }
 
-function StorageState(name, initialValue = null) {
+export const StorageState = classify(function StorageState(name, initialValue = null) {
   // Storage States are cached once created.
   if(storageStateCache[name]) {
     return storageStateCache[name];
@@ -36,6 +36,4 @@ function StorageState(name, initialValue = null) {
   storageStateCache[name] = state;
 
   return state;
-}
-
-module.exports = classify(StorageState);
+});

@@ -5,7 +5,7 @@ function padOut(number: number): string {
 /**
  * Finds the month and date of easter of that year.
  */
-function getEasterDate(year: number) {
+export function getEasterDate(year: number) {
   const C = Math.floor(year / 100);
   const N = year - 19 * Math.floor(year / 19);
   const K = Math.floor((C - 17) / 25);
@@ -21,5 +21,3 @@ function getEasterDate(year: number) {
 
   return padOut(M) + '.' + padOut(D);
 }
-
-export = getEasterDate;

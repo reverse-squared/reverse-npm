@@ -1,10 +1,10 @@
 const MissingItem = Symbol('MissingItem');
-const randomOf = require('./randomOf');
+import { randomOf } from './randomOf';
 
 /**
  * Picks multiple values from an array.
  */
-function randomList<T>(list: T[], items: number = 1, requiredValues: T[] = []): T[] {
+export function randomList<T>(list: T[], items: number = 1, requiredValues: T[] = []): T[] {
   const requiredValuesPositions = requiredValues.map(() => -1);
   const values = Array(items).fill(MissingItem);
   requiredValues.forEach((item, i) => {
@@ -25,5 +25,3 @@ function randomList<T>(list: T[], items: number = 1, requiredValues: T[] = []): 
     return item;
   });
 }
-
-export = randomList;

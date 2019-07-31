@@ -1,4 +1,4 @@
-function queueExec<Args extends any[]>(func: (...args: Args) => void, waitTime: number) {
+export function queueExec<Args extends any[]>(func: (...args: Args) => void, waitTime: number) {
   const funcQueue: Args[] = [];
   let isWaiting = false;
 
@@ -24,5 +24,3 @@ function queueExec<Args extends any[]>(func: (...args: Args) => void, waitTime: 
     }
   }
 };
-
-export = queueExec;
