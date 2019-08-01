@@ -5,7 +5,7 @@ export function compactTime(seconds: number): string {
   if (typeof seconds !== 'number') {
     return 'NaN Seconds';
   }
-  function plural(num, unit) {
+  function plural(num: number, unit: string) {
     num = Math.floor(num);
     return num + ' ' + unit + (num === 1 ? '' : 's');
   }

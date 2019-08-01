@@ -1,31 +1,32 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const classify_1 = require("@reverse/utils/classify");
-exports.Emitter = classify_1.classify(function Emitter() {
-    const listenerMap = new Map();
-    this.addListener = function (event, callback) {
-        if (!listenerMap.has(event)) {
-            listenerMap.set(event, new Set());
+class Emitter {
+    constructor() {
+        this.listenerMap = new Map();
+    }
+    addListener(event, callback) { return this.on(event, callback); }
+    removeListener(event, callback) { return this.off(event, callback); }
+    on(event, callback) {
+        const listeners = this.listenerMap.get(event);
+        if (listeners) {
+            listeners.add(callback);
         }
-        listenerMap.get(event).add(callback);
-    };
-    this.removeListener = function (event, callback) {
-        if (!listenerMap.has(event)) {
-            return;
+    }
+    off(event, callback) {
+        const listeners = this.listenerMap.get(event);
+        if (listeners) {
+            listeners.delete(callback);
         }
-        listenerMap.get(event).delete(callback);
-    };
-    this.removeAllListeners = function (event) {
-        if (!listenerMap.has(event)) {
-            return;
+    }
+    removeAllListener(event) {
+        this.listenerMap.delete(event);
+    }
+    emit(event, ...args) {
+        const listeners = this.listenerMap.get(event);
+        if (listeners) {
+            listeners.forEach((callback) => callback(...args));
         }
-        listenerMap.get(event).clear();
-    };
-    this.emit = function (event, ...args) {
-        if (!listenerMap.has(event)) {
-            return;
-        }
-        listenerMap.get(event).forEach((callback) => callback(...args));
-    };
-});
+    }
+}
+exports.Emitter = Emitter;
 //# sourceMappingURL=Emitter.js.map

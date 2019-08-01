@@ -1,12 +1,11 @@
-import { classify } from '@reverse/utils/classify';
 import { SimpleState } from './SimpleState';
 
-const storageStateCache = {};
+const storageStateCache: { [storageName: string]: StorageState<any> } = {};
 
-function resolveValue(name, fallback) {
+function resolveValue<Type>(name: string, fallback: Type): Type {
   try {
     if(localStorage.getItem(name)) {
-      return JSON.parse(localStorage.getItem(name));
+      return JSON.parse(localStorage.getItem(name) || '!');
     }
   } catch(ignored) {
     // fall back
@@ -14,26 +13,26 @@ function resolveValue(name, fallback) {
   return fallback;
 }
 
-export const StorageState = classify(function StorageState(name, initialValue = null) {
-  // Storage States are cached once created.
-  if(storageStateCache[name]) {
-    return storageStateCache[name];
+class StorageState<Type> extends SimpleState<Type> {
+  protected name!: string;
+  protected initialValue!: Type;
+
+  constructor(name: string, initialValue: Type) {
+    if (name in storageStateCache) {
+      return storageStateCache[name];
+    }
+
+    super(resolveValue(name, initialValue));
+
+    this.name = name;
+    this.initialValue = initialValue;
+
+    this.onChange((value) => {
+      localStorage.setItem(name, JSON.stringify(value));
+    });
   }
-
-  // Make a state
-  const state = new SimpleState(resolveValue(name, initialValue)) as any;
-
-  //
-  state.onChange((value) => {
-    localStorage.setItem(name, JSON.stringify(value));
-  });
-
-  state.reset = () => {
+  reset() {
     localStorage.removeItem(name);
-    state.set(initialValue);
-  };
-
-  storageStateCache[name] = state;
-
-  return state;
-});
+    this.set(this.initialValue);
+  }
+}

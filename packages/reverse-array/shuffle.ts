@@ -1,18 +1,18 @@
+import { randomOf } from "@reverse/random";
+import { remove } from "./remove";
+
 /**
  * Shuffles an array and returns it.
- * @param {Array} array The array to be shuffled.
- * @returns {Array} The shuffled array.
  */
 export function shuffle<T>(array: T[]): T[] {
-  let currentIndex = array.length, randomIndex, temporaryValue;
+  const newArray: Array<T> = [];
+  let shuffleArray = array.concat();
 
-  while (0 !== currentIndex) {
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex -= 1;
-    temporaryValue = array[currentIndex];
-    array[currentIndex] = array[randomIndex];
-    array[randomIndex] = temporaryValue;
+  while (shuffleArray.length > 0) {
+    const item = randomOf(shuffleArray);
+    newArray.push(item);
+    shuffleArray = remove(shuffleArray, item);
   }
 
-  return array;
+  return newArray;
 }

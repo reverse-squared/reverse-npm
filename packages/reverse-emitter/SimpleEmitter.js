@@ -1,19 +1,23 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const classify_1 = require("@reverse/utils/classify");
-exports.SimpleEmitter = classify_1.classify(function SimpleEmitter() {
-    const listeners = new Set();
-    this.addListener = function (callback) {
-        listeners.add(callback);
-    };
-    this.removeListener = function (callback) {
-        listeners.delete(callback);
-    };
-    this.removeAllListeners = function () {
-        listeners.clear();
-    };
-    this.emit = function (...args) {
-        listeners.forEach((callback) => callback(...args));
-    };
-});
+class SimpleEmitter {
+    constructor() {
+        this.listeners = new Set();
+    }
+    addListener(callback) { return this.on(callback); }
+    removeListener(callback) { return this.off(callback); }
+    on(callback) {
+        this.listeners.add(callback);
+    }
+    off(callback) {
+        this.listeners.delete(callback);
+    }
+    removeAllListener() {
+        this.listeners.clear();
+    }
+    emit(...args) {
+        this.listeners.forEach((callback) => callback(...args));
+    }
+}
+exports.SimpleEmitter = SimpleEmitter;
 //# sourceMappingURL=SimpleEmitter.js.map

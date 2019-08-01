@@ -1,29 +1,36 @@
-import { SimpleEmitter, ISimpleEmitter } from '@reverse/emitter/SimpleEmitter';
-import { classify } from '@reverse/utils/classify';
+import { SimpleEmitter } from '@reverse/emitter/SimpleEmitter';
 
-export interface ISimpleState<Value> extends ISimpleEmitter<[Value]> {
-  get(): Value;
-  set(value: Value): void;
-  map(transformer: (previousValue: Value) => Value): void;
-  emit: never;
+export class SimpleState<Type> {
+  protected value: Type;
+  protected emitter: SimpleEmitter<[Type]> = new SimpleEmitter();
+
+  constructor(initialValue: Type) {
+    this.value = initialValue;
+  }
+
+  get() {
+    return this.value;
+  }
+  set(newValue: Type) {
+    this.value = newValue;
+    this.emitter.emit(newValue);
+  }
+
+  map<Args extends any[]>(transformer: (value: Type, ...args: Args[]) => Type, ...args: Args) {
+    this.value = transformer(this.value);
+    this.emitter.emit(this.value);
+  }
+
+  addListener(cb: (value: Type) => void) {
+    this.emitter.addListener(cb);
+  }
+  onChange(cb: (value: Type) => void) {
+    this.emitter.addListener(cb);
+  }
+  removeListener(cb: (value: Type) => void) {
+    this.emitter.removeListener(cb);
+  }
+  offChange(cb: (value: Type) => void) {
+    this.emitter.removeListener(cb);
+  }
 }
-
-export const SimpleState = classify(function SimpleState(initialValue = null) {
-  const emitter = new SimpleEmitter();
-  let value = initialValue;
-
-  this.get = function() {
-    return value;
-  };
-  this.set = function(newValue) {
-    value = newValue;
-    emitter.emit();
-  };
-  this.map = function(transformer) {
-    value = transformer(value);
-    emitter.emit();
-  };
-  this.addListener = emitter.addListener;
-  this.removeListener = emitter.removeListener;
-  this.removeAllListeners = emitter.removeAllListeners;
-});

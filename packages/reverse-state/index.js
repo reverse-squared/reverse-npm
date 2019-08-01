@@ -4,6 +4,5 @@ function __export(m) {
 }
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(require("./SimpleState"));
-__export(require("./StorageState"));
 __export(require("./hookFromState"));
 //# sourceMappingURL=index.js.map

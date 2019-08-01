@@ -1,15 +1,16 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const random_1 = require("@reverse/random");
+const remove_1 = require("./remove");
 function shuffle(array) {
-    let currentIndex = array.length, randomIndex, temporaryValue;
-    while (0 !== currentIndex) {
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
-        temporaryValue = array[currentIndex];
-        array[currentIndex] = array[randomIndex];
-        array[randomIndex] = temporaryValue;
+    const newArray = [];
+    let shuffleArray = array.concat();
+    while (shuffleArray.length > 0) {
+        const item = random_1.randomOf(shuffleArray);
+        newArray.push(item);
+        shuffleArray = remove_1.remove(shuffleArray, item);
     }
-    return array;
+    return newArray;
 }
 exports.shuffle = shuffle;
 //# sourceMappingURL=shuffle.js.map

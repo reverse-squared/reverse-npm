@@ -1,11 +1,11 @@
 /* eslint-disable no-inline-comments */
-import * as commaNumber from 'comma-number';
+import commaNumber from 'comma-number';
 import compactNumberMap from './mapLengthToLetter';
 
 /**
  * Compacts a number, with support for the K (1,000) unit.
  */
-export function compactMiniNumber(num) {
+export function compactMiniNumber(num: number) {
   if(typeof num !== 'number') {
     return 'NaN';
   }

@@ -4,6 +4,5 @@ function __export(m) {
 }
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(require("./catchFallback"));
-__export(require("./classify"));
 __export(require("./switchObject"));
 //# sourceMappingURL=index.js.map

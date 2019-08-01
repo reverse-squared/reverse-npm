@@ -1,18 +1,20 @@
-let React;
+import { SimpleState } from './SimpleState';
+
+let React: any;
 function LoadReact() {
   if (!React) {
     React = require('react');
   }
 }
 
-export function hookFromState(state, name: string = 'ReverseState') {
+export function hookFromState<Type>(state: SimpleState<Type>, name: string = 'ReverseState') {
   LoadReact();
 
-  function StateHook() {
+  function StateHook(): Type {
     const [value, setValue] = React.useState(state.get);
 
     React.useLayoutEffect(() => {
-      function handle(value) {
+      function handle(value: Type) {
         setValue(() => value);
       }
 

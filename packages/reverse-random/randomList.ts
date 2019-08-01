@@ -4,7 +4,7 @@ import { randomOf } from './randomOf';
 /**
  * Picks multiple values from an array.
  */
-export function randomList<T>(list: T[], items: number = 1, requiredValues: T[] = []): T[] {
+export function randomList<T>(list: ReadonlyArray<T>, items: number = 1, requiredValues: ReadonlyArray<T> = []): ReadonlyArray<T> {
   const requiredValuesPositions = requiredValues.map(() => -1);
   const values = Array(items).fill(MissingItem);
   requiredValues.forEach((item, i) => {

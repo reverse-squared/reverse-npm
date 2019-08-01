@@ -3,6 +3,9 @@
   "version": "1.5.2",
   "description": "Useful functions for managing arrays.",
   "main": "index.js",
+  "dependencies": {
+    "@reverse/random": "^1.0.5"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/reverse-squared/reverse-npm.git"

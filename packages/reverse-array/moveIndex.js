@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 function moveIndex(array, oldIndex, newIndex) {
+    array = array.concat();
     if (newIndex >= array.length) {
         let k = newIndex - array.length + 1;
         while (k--) {

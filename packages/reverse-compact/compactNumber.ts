@@ -1,5 +1,5 @@
 /* eslint-disable no-inline-comments */
-import * as commaNumber from 'comma-number';
+import commaNumber from 'comma-number';
 import compactNumberMap from './mapLengthToLetter';
 
 /**

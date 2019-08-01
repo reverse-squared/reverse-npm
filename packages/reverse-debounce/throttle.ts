@@ -1,5 +1,5 @@
 export function throttle<Args extends any[]>(func: (...args: Args) => void, waitTime: number) {
-  let timeout = null;
+  let timeout: number | null = null;
   let previous = 0;
 
   var later = function(...args: Args) {

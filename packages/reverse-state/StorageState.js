@@ -1,31 +1,32 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const classify_1 = require("@reverse/utils/classify");
 const SimpleState_1 = require("./SimpleState");
 const storageStateCache = {};
 function resolveValue(name, fallback) {
     try {
         if (localStorage.getItem(name)) {
-            return JSON.parse(localStorage.getItem(name));
+            return JSON.parse(localStorage.getItem(name) || '!');
         }
     }
     catch (ignored) {
     }
     return fallback;
 }
-exports.StorageState = classify_1.classify(function StorageState(name, initialValue = null) {
-    if (storageStateCache[name]) {
-        return storageStateCache[name];
+class StorageState extends SimpleState_1.SimpleState {
+    constructor(name, initialValue) {
+        if (name in storageStateCache) {
+            return storageStateCache[name];
+        }
+        super(resolveValue(name, initialValue));
+        this.name = name;
+        this.initialValue = initialValue;
+        this.onChange((value) => {
+            localStorage.setItem(name, JSON.stringify(value));
+        });
     }
-    const state = new SimpleState_1.SimpleState(resolveValue(name, initialValue));
-    state.onChange((value) => {
-        localStorage.setItem(name, JSON.stringify(value));
-    });
-    state.reset = () => {
+    reset() {
         localStorage.removeItem(name);
-        state.set(initialValue);
-    };
-    storageStateCache[name] = state;
-    return state;
-});
+        this.set(this.initialValue);
+    }
+}
 //# sourceMappingURL=StorageState.js.map
