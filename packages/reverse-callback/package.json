@@ -1,6 +1,6 @@
 {
   "name": "@reverse/callback",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Little callbacks.",
   "main": "index.js",
   "repository": {
