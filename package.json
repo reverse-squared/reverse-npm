@@ -4,7 +4,7 @@
   "scripts": {
     "lint": "cspell packages/**/*.js && eslint packages",
     "build": "tsc",
-    "upload": "tsc && git commit -a && lerna publish"
+    "upload": "tsc && lerna publish"
   },
   "devDependencies": {
     "cspell": "^4.0.23",
