@@ -3,7 +3,8 @@
   "private": true,
   "scripts": {
     "lint": "cspell packages/**/*.js && eslint packages",
-    "build": "tsc"
+    "build": "tsc",
+    "upload": "tsc && git commit -a && lerna publish"
   },
   "devDependencies": {
     "cspell": "^4.0.23",
