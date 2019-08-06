@@ -1,9 +1,9 @@
 {
   "name": "@reverse/emitter",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Event Emitters",
   "dependencies": {
-    "@reverse/utils": "^1.3.4"
+    "@reverse/utils": "^1.3.5"
   },
   "publishConfig": {
     "access": "public"
