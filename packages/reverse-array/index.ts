@@ -1,3 +1,4 @@
+export * from './createArary';
 export * from './moveIndex';
 export * from './remove';
 export * from './removeAt';
