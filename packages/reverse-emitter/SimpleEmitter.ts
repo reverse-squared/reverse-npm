@@ -11,7 +11,7 @@ export class SimpleEmitter<Args extends any[]> {
     this.listeners.delete(callback);
   }
 
-  removeAllListener() {
+  removeAllListeners() {
     this.listeners.clear();
   }
   emit(...args: Args) {
