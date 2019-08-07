@@ -1,10 +1,11 @@
-import { randomOf } from "@reverse/random";
-import { remove } from "./remove";
-
 /**
  * Shuffles an array and returns it.
  */
 export function shuffle<T>(array: T[]): T[] {
+  if(!Array.isArray(array)) {
+    throw new TypeError('Array to modify must be an array.');
+  }
+  
   var newArray: T[] = [];
   var currentIndex = array.length, temporaryValue, randomIndex;
 

@@ -6,7 +6,7 @@ describe('createArray(length, mapper)', () => {
 
     const array = createArray(0, cb);
 
-    expect(array).toBeType('array');
+    expect(Array.isArray(array)).toBe(true);
     expect(array.length).toEqual(0);
     expect(cb).not.toBeCalled()
   });
@@ -15,7 +15,7 @@ describe('createArray(length, mapper)', () => {
 
     const array = createArray(10, cb);
 
-    expect(array).toBeType('array');
+    expect(Array.isArray(array)).toBe(true);
     expect(array.length).toEqual(10);
     expect(cb).toBeCalledTimes(10);
 
@@ -25,11 +25,11 @@ describe('createArray(length, mapper)', () => {
   });
   it('Various Lengths', () => {
     const array = createArray(100, () => null);
-    expect(array).toBeType('array');
+    expect(Array.isArray(array)).toBe(true);
     expect(array.length).toEqual(100);
 
     const array2 = createArray(43, () => null);
-    expect(array2).toBeType('array');
+    expect(typeof array2 === 'object').toBe(true);
     expect(array2.length).toEqual(43);
   });
   it('Invalid Arguments', () => {
