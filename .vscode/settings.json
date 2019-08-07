@@ -8,5 +8,7 @@
     "packages/**/*.js": true,
     "packages/**/*.js.map": true,
     "packages/**/*.d.ts": true,
+    "packages/**/.npmignore": true,
+    "packages/**/*.test.js": false,
   }
 }

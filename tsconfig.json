@@ -26,8 +26,11 @@
       "dom",
     ]
   },
+  "include": [
+    "jest.ts"
+  ],
   "exclude": [
     "node_modules",
-    "**/*.spec.ts"
+    "**/*.test.ts"
   ]
 }
