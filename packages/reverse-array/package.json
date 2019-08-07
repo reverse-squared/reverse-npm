@@ -1,6 +1,6 @@
 {
   "name": "@reverse/array",
-  "version": "1.6.2",
+  "version": "1.6.3",
   "description": "Useful functions for managing arrays.",
   "main": "index.js",
   "dependencies": {
