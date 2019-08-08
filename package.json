@@ -5,7 +5,7 @@
     "lint": "cspell packages/**/*.js && eslint packages",
     "build": "tsc",
     "upload": "tsc && jest && lerna publish",
-    "test": "tsc && jest --coverage --coverageReporters=text-lcov | coveralls"
+    "test": "tsc && jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
   "devDependencies": {
     "@types/jest": "^24.0.17",

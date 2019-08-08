@@ -11,9 +11,9 @@ export function encode(value: string) {
     throw new TypeError('Value must be a string.');
   }
 
-  let code;
+  let code: string;
   if(errorCache.has(value)) {
-    code = errorCache.get(value);
+    code = errorCache.get(value) as string;
   } else {
     let i = 0;
     do {

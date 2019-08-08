@@ -1,5 +1,4 @@
 /* eslint-disable no-inline-comments */
-import commaNumber from 'comma-number';
 import compactNumberMap from './mapLengthToLetter';
 
 function scientificToDecimal(num: number | string): string {

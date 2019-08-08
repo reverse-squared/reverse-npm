@@ -9,4 +9,4 @@ before_script:
   - lerna bootstrap
 
 script:
-  - npm test
+  - tsc && jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage
