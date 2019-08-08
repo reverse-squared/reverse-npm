@@ -3,8 +3,12 @@
  */
 export function compactTime(seconds: number): string {
   if (typeof seconds !== 'number') {
-    return 'NaN Seconds';
+    throw new TypeError('The amount of seconds provided must be a number.')
   }
+  if(seconds < 0) {
+    throw new TypeError('The amount of seconds provided must be a positive number.');
+  }
+  
   function plural(num: number, unit: string) {
     num = Math.floor(num);
     return num + ' ' + unit + (num === 1 ? '' : 's');
