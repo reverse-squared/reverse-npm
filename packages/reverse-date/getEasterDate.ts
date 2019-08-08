@@ -6,6 +6,10 @@ function padOut(number: number): string {
  * Finds the month and date of easter of that year.
  */
 export function getEasterDate(year: number) {
+  if(typeof year !== 'number') {
+    throw new TypeError('Passed year must be a number.');
+  }
+  
   const C = Math.floor(year / 100);
   const N = year - 19 * Math.floor(year / 19);
   const K = Math.floor((C - 17) / 25);

@@ -3,3 +3,4 @@ package-lock.json
 packages/**/*.js
 packages/**/*.js.map
 packages/**/*.d.ts
+coverage/
