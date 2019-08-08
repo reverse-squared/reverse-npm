@@ -5,6 +5,8 @@ node_js:
 install: 
   - npm install
 
-script:
+before_script: 
   - lerna bootstrap
+
+script:
   - npm test

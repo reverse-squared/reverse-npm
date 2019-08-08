@@ -7,6 +7,10 @@ const errorCacheReverse = new Map<string, string>();
  * Encodes a value to a six character code.
  */
 export function encode(value: string) {
+  if(typeof value !== 'string') {
+    throw new TypeError('Value must be a string.');
+  }
+
   let code;
   if(errorCache.has(value)) {
     code = errorCache.get(value);
