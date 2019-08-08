@@ -4,4 +4,5 @@ install:
   - npm install
 
 script:
+  - lerna bootstrap
   - npm test
