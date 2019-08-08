@@ -1,4 +1,4 @@
-import { SimpleEmitter } from '@reverse/emitter/SimpleEmitter';
+import { SimpleEmitter } from '@reverse/emitter';
 
 export class SimpleState<Type> {
   protected value: Type;
