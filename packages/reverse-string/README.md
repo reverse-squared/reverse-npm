@@ -56,3 +56,22 @@ isValidEmail('example@example.com');
 isValidEmail('ample.com');
 // false
 ```
+
+## plural(number, word)
+> Makes a word plural if the number is not one.
+### Parameters
+- `number: number`: The amount of that object.
+- `word: string`: The word to plural-ize.
+### Example
+```js
+import { plural } from '@reverse/string';
+
+plural(0, 'Dog');
+// Dogs
+
+plural(1, 'Dog');
+// Dog
+
+plural(10, 'Dog');
+// Dogs
+```
