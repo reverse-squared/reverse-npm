@@ -3,9 +3,9 @@
   "private": true,
   "scripts": {
     "lint": "cspell packages/**/*.js && eslint packages",
-    "build": "tsc",
-    "upload": "tsc && jest && lerna publish",
-    "test": "tsc && jest"
+    "build": "rollup -c",
+    "upload": "rollup -c && jest && lerna publish",
+    "test": "rollup -c && jest"
   },
   "devDependencies": {
     "@types/jest": "^24.0.17",
@@ -16,5 +16,10 @@
     "lerna": "^3.15.0",
     "ts-jest": "^24.0.2",
     "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-typescript2": "^0.24.3"
   }
 }

@@ -1,6 +1,3 @@
-import { randomOf } from "@reverse/random";
-import { remove } from "./remove";
-
 /**
  * Shuffles an array and returns it.
  */

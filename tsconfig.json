@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "es2015",
     "declaration": true,
     "noImplicitAny": true,
     "removeComments": true,
@@ -15,6 +15,7 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
+    "moduleResolution": "node",
     "jsx": "preserve",
     "lib": [
       "es2020",
