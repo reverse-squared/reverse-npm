@@ -1,6 +1,6 @@
 {
   "name": "@reverse/random",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Easy random generation.",
   "main": "index.js",
   "repository": {

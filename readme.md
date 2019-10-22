@@ -2,6 +2,8 @@
 > A collection of neat packages you can do stuff with.
 
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
+[![Build Status](https://travis-ci.com/reverse-squared/reverse-npm.svg?branch=master)](https://travis-ci.com/reverse-squared/reverse-npm)
+[![Coverage Status](https://coveralls.io/repos/github/reverse-squared/reverse-npm/badge.svg?branch=master)](https://coveralls.io/github/reverse-squared/reverse-npm?branch=master)
 
 These packages are utility things that we have in our own projects that we make, and decided to make
 them public. You will find all sorts of really weird and useful things in all sorts of areas of
@@ -13,6 +15,7 @@ be bundled with something like Webpack.
 - [@reverse/compact](./packages/reverse-compact/README.md)
 - [@reverse/date](./packages/reverse-date/README.md)
 - [@reverse/emitter](./packages/reverse-emitter/readme.md)
+- [@reverse/encoder](./packages/reverse-encoder/README.md)
 - [@reverse/random](./packages/reverse-random/README.md)
 - [@reverse/state](./packages/reverse-state/readme.md)
 - [@reverse/string](./packages/reverse-string/README.md)
