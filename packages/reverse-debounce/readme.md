@@ -1,17 +1,21 @@
 # @reverse/debounce
+
 > Debounce, Throttle, and Queue Execution Factories
 
 You can install with nodejs and npm
+
 ```
 npm i @reverse/emitter
 ```
 
-## Table of Contents**
+## Table of Contents\*\*
+
 - [debounce](#debounce)
 - [throttle](#throttle)
 - [queueExec](#queueExec)
 
 ## debounce
+
 ```js
 import { debounce } from '@reverse/debounce';
 
@@ -23,6 +27,7 @@ const debouncedThing = debounce(thing, 500);
 ```
 
 ## throttle
+
 ```js
 import { throttle } from '@reverse/debounce';
 
@@ -34,6 +39,7 @@ const throttledThing = throttle(thing, 500);
 ```
 
 ## queueExec
+
 ```js
 import { queueExec } from '@reverse/debounce';
 

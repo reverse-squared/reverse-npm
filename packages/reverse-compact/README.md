@@ -1,20 +1,25 @@
 # @reverse/compact
+
 > Functions for compacting numbers.
 
 ## Install
+
 ```
 npm install @reverse/compact
 ```
 
 ## Table of Contents
+
 - [compactNumber](#compactNumbernum-zeroDecimal)
 - [compactMiniNumber](#compactMiniNumbernum)
 - [compactTime](#compactTimeseconds)
 
---- 
+---
 
 ## Usage
+
 This package uses the following letters for compacting numbers:
+
 ```js
 let compactNumberMap = {
   4: 'K', // 1,000 -> 1K (only in compactMini)
@@ -32,11 +37,16 @@ let compactNumberMap = {
 ```
 
 ### compactNumber(num, zeroDecimal)
+
 > Compacts a number using an letter.
+
 #### Parameters
+
 - `num: Number`: The number to compact.
 - `zeroDecimal: Boolean`: Whether or not to include a `.0` at the end of a number.
+
 #### Example
+
 ```js
 import { compactNumber } from '@reverse/compact';
 
@@ -51,10 +61,15 @@ compactNumber(2000000, true);
 ```
 
 ### compactMiniNumber(num)
+
 > Compacts a number, with support for the K (1,000) unit.
+
 #### Parameters
+
 - `num: Number`: The number to compact.
+
 #### Example
+
 ```js
 import { compactMiniNumber } from '@reverse/compact';
 
@@ -66,10 +81,15 @@ compactMiniNumber(1500);
 ```
 
 ### compactTime(seconds)
+
 > Compacts seconds to days, hours, minutes, and seconds.
+
 #### Parameters
+
 - `seconds: Number`: The amount of seconds.
+
 #### Examples
+
 ```js
 import { compactTime } from '@reverse/compact';
 

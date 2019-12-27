@@ -1,24 +1,33 @@
 # @reverse/random
+
 > Easy random generation.
 
 You can install with nodejs and npm
+
 ```
 npm i @reverse/random
 ```
 
 ## Table of Contents
+
 - [randomInt](#randomIntmin-max)
 - [chance](#chancepercent)
 - [randomOf](#randomOflist)
 - [randomList](#randomListlist-items-requiredValues)
 
 ## Usage
+
 ### randomInt(min, max)
+
 > Generates a random whole number between two values.
+
 #### Parameters
+
 - `min: Number`: The minimum number to generate inclusivly.
 - `max: Number`: The maximum number to generate inclusivly.
+
 #### Example
+
 ```js
 import { randomInt } from '@reverse/random';
 
@@ -27,28 +36,38 @@ randomInt(1, 5);
 ```
 
 ### chance(percent)
+
 > Returns true a percent amount of the time.
+
 #### Parameters
+
 - `percent: Number`: The percent chance to return true.
+
 #### Example
+
 ```js
 import { chance } from '@reverse/random';
 
 chance(100);
 // true
 
-chance(0)
+chance(0);
 // false
 
-chance(50)
+chance(50);
 // Example Output: true
 ```
 
 ### randomOf(list)
+
 > Returns a random element from an array.
+
 #### Parameters
+
 - `list: Array`: The array to pick from.
+
 #### Example
+
 ```js
 import { randomOf } from '@reverse/random';
 
@@ -57,12 +76,17 @@ randomOf([1, 2, 3]);
 ```
 
 ### randomList(list, items, requiredValues)
+
 > Picks multiple values from an array.
+
 #### Parameters
+
 - `list: Array`: The array to choose from.
 - `items: Number`: How many items should be returned. Default 1.
 - `requiredValues: Array`: The values that have to be in the returned items. Default [].
+
 #### Example
+
 ```js
 import { randomList } from '@reverse/random';
 
