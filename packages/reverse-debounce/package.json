@@ -1,6 +1,6 @@
 {
   "name": "@reverse/debounce",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Debounce, Throttle, and Queue Execution Factories.",
   "publishConfig": {
     "access": "public"
