@@ -1,6 +1,6 @@
 {
   "name": "@reverse/emitter",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "Event Emitters",
   "publishConfig": {
     "access": "public"

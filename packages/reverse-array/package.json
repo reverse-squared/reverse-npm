@@ -1,10 +1,10 @@
 {
   "name": "@reverse/array",
-  "version": "1.7.2",
+  "version": "1.7.3",
   "description": "Useful functions for managing arrays.",
   "main": "index.js",
   "dependencies": {
-    "@reverse/random": "^1.0.11"
+    "@reverse/random": "^1.0.12"
   },
   "repository": {
     "type": "git",

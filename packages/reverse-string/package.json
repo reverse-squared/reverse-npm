@@ -1,6 +1,6 @@
 {
   "name": "@reverse/string",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "Useful functions for modifying and managing strings.",
   "main": "index.js",
   "repository": {

@@ -1,6 +1,6 @@
 {
   "name": "@reverse/date",
-  "version": "1.1.9",
+  "version": "1.1.10",
   "description": "Useful functions for handling dates.",
   "main": "index.js",
   "repository": {
