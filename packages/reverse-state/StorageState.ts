@@ -13,7 +13,7 @@ function resolveValue<Type>(name: string, fallback: Type): Type {
   return fallback;
 }
 
-class StorageState<Type> extends SimpleState<Type> {
+export class StorageState<Type> extends SimpleState<Type> {
   protected name!: string;
   protected initialValue!: Type;
 

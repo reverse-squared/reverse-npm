@@ -26,7 +26,6 @@ export function hookFromState<Type>(state: SimpleState<Type>, name: string = 'Re
 
     return value;
   }
-  StateHook.name = 'use' + name;
 
   return StateHook;
 }
