@@ -7,16 +7,16 @@ function LoadReact() {
   }
 }
 
-export function hookFromState<Type>(state: SimpleState<Type>, name: string = 'ReverseState') {
+export function hookFromState<T>(state: SimpleState<T>) {
   LoadReact();
   
   const get = () => state.get;
 
-  function StateHook(): Type {
+  function StateHook(): T {
     const [value, setValue] = React.useState(get);
 
     React.useLayoutEffect(() => {
-      function handle(value: Type) {
+      function handle(value: T) {
         setValue(() => value);
       }
 
