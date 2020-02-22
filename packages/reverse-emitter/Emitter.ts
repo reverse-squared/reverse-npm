@@ -8,12 +8,17 @@ export class Emitter {
     const listeners = this.listenerMap.get(event);
     if (listeners) {
       listeners.add(callback);
+    } else {
+      this.listenerMap.set(event, new Set([ callback ]));
     }
   }
   off(event: string, callback: Function) {
     const listeners = this.listenerMap.get(event);
     if (listeners) {
       listeners.delete(callback);
+      if(listeners.size === 0) {
+        this.listenerMap.delete(event);
+      }
     }
   }
 
