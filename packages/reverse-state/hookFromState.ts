@@ -10,7 +10,7 @@ function LoadReact() {
 export function hookFromState<T>(state: SimpleState<T>) {
   LoadReact();
   
-  const get = () => state.get;
+  const get = () => state.get();
 
   function StateHook(): T {
     const [value, setValue] = React.useState(get);
